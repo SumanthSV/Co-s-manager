@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Information</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        line-height: 1.7;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        background: linear-gradient(270deg, #e9c66f, #e9c66f, #f7f3b7, #e9c66f, #e9c66f);
+        color: rgb(14, 14, 14);
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer; 
+        position: relative;
+        right: 160px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .container {
+            padding: 10px;
+        }
+    }
+    .display{
+        display: flex;
+        column-gap: 80px
+    }
+    .container h1{
+        text-align: center;
+    }
+    
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Form</h1>
+    <form action="student_report.php" method="post" required="confirm('Are you sure to submit?')">
+        <div class="display">
+
+            <div class="first">
+                
+                <label for="usn">USN (University Serial Number):</label>
+                <input type="text" id="usn" name="usn" placeholder="Enter USN...." required>
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Name...." required>
+                
+                <label for="quiz">Quiz Marks:</label>
+                <input type="number" id="quiz" name="quiz" placeholder="Enter Quiz Marks...." required>
+                
+                <label for="assigntement">Assignment Marks(20%):</label>
+                <input type="number" id="assignment" name="assignment" placeholder="Enter Assignment Marks...."required>
+                
+                <label for="total">Test Marks(25%):</label>
+                <input type="number" id="total" name="test" placeholder="Enter Test Marks...."required>
+                
+                <label for="grade">SEE(40%):</label>
+                <input type="text" id="grade" name="SEE" placeholder="Enter SSE Marks...."required>
+                
+            </div>
+            <div class="second">
+                
+                <form action="#" method="post">
+                    
+                    <label for="co1">Course Outcome 1:</label>
+                    <input type="text" id="co1" name="co1" placeholder="Enter CO1...." required>
+                    
+                    <label for="co2">Course Outcome 2:</label>
+                    <input type="text" id="co2" name="co2" placeholder="Enter CO2...." required>
+                    
+                    <label for="co3">Course Outcome 3:</label>
+                    <input type="text" id="co3" name="co3" placeholder="Enter CO3...." required>
+                    
+                    <label for="co4">Course Outcome 4:</label>
+                    <input type="text" id="co4" name="co4" placeholder="Enter CO4...." required>
+                    
+                    <label for="co5">Course Outcome 5:</label>
+                    <input type="text" id="co5" name="co5" placeholder="Enter CO5...." required>
+                    
+                    <label for="co6">Course Outcome 6:</label>
+                    <input type="text" id="co6" name="co6" placeholder="Enter CO6...." requiredrequired>
+                    
+                    
+                    <div class="submit">
+                        <input type="submit" value="Submit" onclick="return  confirm('Submit')  ">
+                        
+                    </div>
+                </div>
+        </div>
+    </form>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="emailForm">
+        <label for="to">To:</label>
+        <input type="email" id="to" name="to" required><br><br>
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit" onclick='alert("Hi")'>Send Email</button>
+    </form>
+    <script>
+        document.getElementById("emailForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let formData = new FormData(this);
+    fetch("/GMU/send_email.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return response.text();
+    })
+    .then(data => {
+        alert(data); // Display response from the server
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+});
+    </script>
+</body>
+</html>

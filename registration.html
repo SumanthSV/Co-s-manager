@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #000;
+    }
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input{
+        outline:none;
+        margin-top: 5px;
+        box-shadow: 0px 0px 2px 0px rgb(157, 157, 238);
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #000;
+    }
+    input[type="text"], input[type="email"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background:linear-gradient(270deg, #e9c66f, #e9c66f, #f7f3b7, #e9c66f, #e9c66f);
+        color: black;
+        font-weight: bold ;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background:linear-gradient(270deg, #e9c66f, #eed490, #eee9a1, #e9c66f, #e9c66f) ;
+    }
+    label {
+        
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    .logo{
+        width: 4rem;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 0px #e9c66f;
+    }
+    #evaluator{
+      border-radius: 09px;
+      color:gray;
+      border: transparent;
+      box-shadow: 0px 0px 2px black;
+      width: 195px;
+      text-align: center;
+      margin-top: 12px;
+      padding: 5px;
+      margin-left: 35px;
+      
+    }
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image">
+          <img class="logo" src="https://www.gmu.ac.in/assets/imgs/gmulogo1.png" alt="">  
+    </div>
+    <h2  style="color: #5b1f1f;">Registration Form</h2>
+    <form action="registration.php" method="post">
+        <label for="">Name:</label>
+        <input type="text" name="name" placeholder="Enter the name..." required>
+        <label for="">Ph Number :</label>
+
+        <input type="text" name="phone" placeholder="Enter the Ph Number..." required>
+        <label for="">Email :</label>
+
+        <input type="email" name="email" placeholder=" Enter the email..." required>
+        <label for="">Create Password:</label>
+
+        <input type="password" name="password" placeholder="Create Password..." required>
+        <label for="">Confirm Password:</label>
+
+        <input type="password" name="confirm_password" placeholder="Confirm Password..." required>
+
+        <!-- <input type="checkbox" name="checkbox" >
+        <label for="">Internal Evaluator</label>
+
+        <input type="checkbox" name="checkbox" >
+        <label for="">External Evaluator</label> -->
+        <label for="" style="margin-left:12px;">Evaluator : </label>
+        <select name="Evaluator" id="evaluator" >
+            <option value="" default> SELECT</option>
+            <option value="internal_evaluator">Internal Evaluator</option>
+            <option value="External_evaluator">External Evaluator</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<script>
+     document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector("form").addEventListener("submit", function(event) {
+            var password = document.querySelector("input[name='password']").value;
+            var confirmPassword = document.querySelector("input[name='confirm_password']").value;
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                event.preventDefault();
+            }
+        });
+    });
+</script>
+</body>
+</html>

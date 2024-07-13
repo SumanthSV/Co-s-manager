@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz marks Obtained</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        color: #000;
+      }
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 3px  0px 15px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 45px;
+        position: fixed;
+        left:30%;
+      }
+      input {
+        outline: none;
+        margin-top: 5px;
+        box-shadow: 0px 0px 2px 0px rgb(157, 157, 238);
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #000;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="number"] {
+        width: 175px;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        
+        border-radius: 5px;
+        background: linear-gradient(
+          270deg,
+          #e9c66f,
+          #e9c66f,
+          #f7f3b7,
+          #e9c66f,
+          #e9c66f
+        );
+        color: black;
+        font-weight: bold;
+        margin-top: 20px;
+        cursor: pointer;
+        margin-left: 55px;
+      
+      }
+      input[type="submit"]:hover {
+        background: linear-gradient(
+          270deg,
+          #e9c66f,
+          #eed490,
+          #eee9a1,
+          #e9c66f,
+          #e9c66f
+        );
+      }
+      label {
+        font-weight: bold;
+        font-size: 0.8rem;
+      }
+      .logo {
+        width: 4rem;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 0px #e9c66f;
+      }
+      #maindiv {
+        border-radius: 09px;
+        color: gray;
+        border: transparent;
+        /* box-shadow: 0px 0px 2px black; */
+        width: 595px;
+        text-align: center;
+        margin-top: 12px;
+        padding: 5px;
+        /* display: flex; */
+
+      }
+      #box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        /* flex-wrap: wrap; */
+      }
+      #selectactivity{
+        padding: 8px 27px;
+        border-radius: 10px;
+      }
+</style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image">
+        <img
+          class="logo"
+          src="https://www.gmu.ac.in/assets/imgs/gmulogo1.png"
+          alt=""
+        />
+      </div>
+      <h2 style="color: #5b1f1f">Marks Allotment</h2>
+      <div class="usninput">
+      
+      
+      <form action="quiz.php" method="post">
+        <label for="" >Enter USN: </label>
+        <input type="text" name="USN" >
+
+
+        <div class="selectactivity">
+          <label for="">Select Activity : </label>
+          <select name="table" id="selectactivity" required>
+            <option value="" default >Choose</option>
+          <option value="quiz_table">Quiz</option>
+          <option value="assignment_table">Assignment</option>
+          <option value="test_table">Test</option> 
+        </select> 
+        </div>
+      </div>
+        <div id="maindiv">
+          <H2 style="font-size: medium;">Activity 1</H2>
+          <div id="box">
+            
+            <div>
+              <label for="">CO1 : </label>
+              <input
+                type="number"
+                name="CO1"
+                placeholder="Enter the CO1..."
+                required
+              />
+            </div>
+
+            <div>
+              <label for="">CO2 : </label>
+
+              <input
+                type="number"
+                name="CO2"
+                placeholder="Enter the CO2..."
+                required
+              />
+            </div>
+          </div>
+          <H2 style="font-size: medium;">Activity 2</H2>
+          <div id="box">
+            
+            <div>
+              <label for="">CO3 : </label>
+
+              <input
+                type="number"
+                name="CO3"
+                placeholder=" Enter the CO3..."
+                required
+              />
+            </div>
+            <div>
+              <label for="">CO4 : </label>
+
+              <input
+                type="number"
+                name="CO4"
+                placeholder="Enter the CO4..."
+                required
+              />
+            </div>
+          </div>
+          <H2 style="font-size: medium;">Activity 3</H2>
+          <div id="box">
+            
+            <div>
+              <label for="">CO5 : </label>
+
+              <input
+                type="number"
+                name="CO5"
+                placeholder="Enter the CO5..."
+                required
+              />
+            </div>
+            <div>
+              <label for="">CO6 : </label>
+
+              <input
+                type="number"
+                name="CO6"
+                placeholder="Enter the CO6..."
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+  </body>
+</html>

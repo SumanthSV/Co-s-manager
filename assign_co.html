@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Forms</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            /* display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center; */
+            width: 80%;
+            height: 200px;
+            margin: 50px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 16px 14px 31.1px -5px rgba(14, 0, 0, 0.2);
+            column-gap: 20px;
+        }
+
+        .form-container h2 {
+            color: rgb(11, 11, 11);
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            column-gap: 20px;
+            line-height: 25px;
+            display: flex;
+            flex-direction: column;
+            
+
+        }
+
+        .form-group label {
+            display: flex;
+            color: rgb(23, 22, 22);
+            font-weight: bold;
+            margin-bottom: 5px;
+            flex: 1;
+            align-items: center;
+        }
+
+        .form-group input[type="text"] {
+            flex: 3;
+            /* width: calc(50% - 20px); */
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #a29b9b;
+            border-radius: 5px;
+            box-shadow: 16px 14px 31.1px -5px rgba(14, 0, 0, 0.2);
+        }
+
+
+        .but input  {
+            padding: 70px 70px;
+            background-color: #fff;
+            border: none;
+            color: rgb(251, 249, 249);
+            cursor: pointer;
+            border-radius: 15px;
+            flex: 1;
+            font-size: 1.3rem;
+            font-weight: bolder;
+            background-color: rgba(24, 24, 243, 0.815);
+            box-shadow: 16px 14px 31.1px -5px rgba(14, 0, 0, 0.2);
+        }
+
+        .head h1 {
+            text-align: center;
+        }
+
+        .whole {
+            max-width: 60vw;
+            margin: 20px auto;
+            box-shadow: 16px 14px 31.1px -5px rgba(14, 0, 0, 0.2);
+        }
+        .quizfrom{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #assignment input{
+            width: 180px; 
+           display: flex;
+           justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <div class="whole">
+        <div class="head">
+            <h1>
+                Maximum CO's Alloted 
+            </h1>
+        </div>
+
+        <div class="form-container">
+
+            <form id="quiz" action="assign_co.php" method="post">
+                <div class="quizfrom">
+                    <div class="form-group">
+                        <label for="co1">CO1:</label>
+                        <input type="text" id="co1" name="co1" required>
+                        <label for="co2">CO2:</label>
+                        <input type="text" id="co2" name="co2" required>
+                        <label for="co3">CO3:</label>
+                        <input type="text" id="co3" name="co3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co4">CO4:</label>
+                        <input type="text" id="co4" name="co4" required>
+                        <label for="co5">CO5:</label>
+                        <input type="text" id="co5" name="co5" required>
+                        <label for="co6">CO6:</label>
+                        <input type="text" id="co6" name="co6" required>
+                    </div>
+                <div class="but">
+                                <input type="submit" name="activity" value="Quiz"/>
+                </div>
+                </div>
+               
+
+            </form>
+            
+
+        </div>
+
+        <div class="form-container">
+            <form id="assignment" action="assign_co.php" method="post">
+                <div class="quizfrom">
+                <div class="form-group">
+                    <label for="co1">CO1:</label>
+                    <input type="text" id="co1" name="co1" required>
+                    <label for="co2">CO2:</label>
+                    <input type="text" id="co2" name="co2" required>
+                    <label for="co3">CO3:</label>
+                    <input type="text" id="co3" name="co3" required>
+                </div>
+                <div class="form-group">
+                    <label for="co4">CO4:</label>
+                    <input type="text" id="co4" name="co4" required>
+                    <label for="co5">CO5:</label>
+                    <input type="text" id="co5" name="co5" required>
+                    <label for="co6">CO6:</label>
+                    <input type="text" id="co6" name="co6" required>
+                </div>
+
+            
+                <div class="but">
+                    <input type="submit" name="activity" value="Assignment" id="assignment" />
+                </div>
+            </div>
+        </form>
+        </div>
+
+        <div class="form-container">
+            <form id="test" action="assign_co.php" method="post">
+                
+                <div class="quizfrom">
+                    <div class="form-group">
+                        <label for="co1">CO1:</label>
+                        <input type="text" id="co1" name="co1" required>
+                        <label for="co2">CO2:</label>
+                        <input type="text" id="co2" name="co2" required>
+                        <label for="co3">CO3:</label>
+                        <input type="text" id="co3" name="co3" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="co4">CO4:</label>
+                        <input type="text" id="co4" name="co4" required>
+                    <label for="co5">CO5:</label>
+                    <input type="text" id="co5" name="co5" required>
+                    <label for="co6">CO6:</label>
+                    <input type="text" id="co6" name="co6" required>
+                </div>
+                
+                
+                <div class="but">
+                    <input type="submit" name="activity" value="test"/>
+                </div>
+            </div>
+        </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

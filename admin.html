@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background: linear-gradient(270deg, #e9c66f, #e9c66f, #f7f3b7, #e9c66f, #e9c66f);
+            color: rgb(15, 14, 14);
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+
+
+        .cont img {
+            width: 25%;
+            border-radius: 80px;
+            box-shadow: 2px 2px 2px 0.6px rgb(42, 41, 41);
+
+        }
+
+        .cont {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .cont h6 {
+            font-size: 1rem;
+        }
+
+        .maintext {
+            line-height: 0.4;
+            text-align: center;
+        }
+        .cont h2{
+            color:#5b1f1f;
+        }
+        .login{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background:linear-gradient(270deg, #e9c66f, #e9c66f, #f7f3b7, #e9c66f, #e9c66f);
+            color: black;
+            font-weight: bold ;
+            cursor: pointer;
+        }
+        .conttext a{
+            text-decoration: none;
+            margin-left: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="cont">
+
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkRIHmyzzPIxto73fi3gABvRnmYepfCiqq_w&usqp=CAU" alt="">
+            <div class="maintext">
+
+                <h2>Student Report</h2>
+                <h6>Admin</h6>
+            </div>
+        </div>
+        <div class="conttext">
+
+            <form action="admin.php" method="post">
+                <label for="username">User name:</label>
+                <input type="text" id="username" name="username" placeholder="Enter the username... " required>
+
+                <label for="password"> Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter the password..." required>
+
+                <input type="submit" value="Login">
+                <a href="evaluator.html">.....are you Evaluator</a>
+
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
